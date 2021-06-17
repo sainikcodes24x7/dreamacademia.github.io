@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto slide testimonial carousel</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background-color: rosybrown;
+        }
+        
+        .hi-slide {
+            position: relative;
+            width: 754px;
+            height: 292px;
+            margin: 115px auto 0;
+        }
+        
+        .hi-slide .hi-next,
+        .hi-next .hi-prev {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            border-radius: 50px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgb(101, 231, 101);
+            color: rgb(243, 129, 186);
+            transition: all 0.7s;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .hi-slide .hi-next:hover,
+        .hi-next .hi-prev:hover {
+            opacity: 1;
+            background-color: ivory;
+        }
+        
+        .hi-slide .hi-prev {
+            left: -70px;
+        }
+        
+        .hi-slide .hi-prev ::before {
+            content: '<';
+        }
+        
+        .hi-slide .hi-next {
+            right: -70px;
+        }
+        
+        .hi-slide .hi-next ::before {
+            content: '>';
+        }
+        
+        .hi-slide>ul {
+            list-style: none;
+            position: relative;
+            width: 754px;
+            height: 292px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .hi-slide>ul>li {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            left: 377px;
+            top: 147px;
+            width: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 3px solid white;
+            background-color: #333;
+            cursor: pointer;
+        }
+        
+        .hi-slide>ul>li>img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide hi-slide">
+        <div class="hi-prev"> </div>
+        <div class="hi-next"></div>
+        <ul>
+            <li>
+                <img src="https://images.pexels.com/photos/7817108/pexels-photo-7817108.jpeg?cs=srgb&dl=pexels-ron-lach-7817108.jpg&fm=jpg" alt="">
+            </li>
+            <li>
+                <img src="https://www.pexels.com/photo/women-in-blue-bikini-top-on-swimming-pool-3775163/" alt="">
+            </li>
+            <li>
+                <img src="https://www.pexels.com/photo/woman-sitting-on-stair-1771383/" alt="">
+            </li>
+            <li>
+                <img src="https://www.pexels.com/photo/woman-waving-hair-1898555/" alt="">
+            </li>
+            <li>
+                <img src="https://www.pexels.com/photo/woman-wearing-sunhat-1382731/" alt="">
+            </li>
+            <li>
+                <img src="https://www.pexels.com/photo/selective-focus-photography-of-woman-wearing-crown-3257307/" alt="">
+            </li>
+
+        </ul>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js">
+    </script>
+    <script src="js/jquery.hislide.js"></script>
+
+
+
+
+</body>
+
+</html>
